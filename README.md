@@ -128,3 +128,28 @@ The database is designed to manage users, properties, bookings, payments, and re
 
 ---
 
+## Feature Breakdown
+
+The Airbnb Clone project includes several core features that replicate the essential functionality of a property rental platform. Each feature is designed to provide a seamless experience for both guests and hosts, ensuring usability, scalability, and reliability.
+
+### 1. User Management
+This feature allows users to register, log in, and manage their accounts. Users can act as guests (booking properties) or hosts (listing properties), with role-specific functionality tailored to their needs.
+
+### 2. Property Management
+Hosts can create, update, and manage property listings. Each listing includes details such as title, description, location, pricing, and images, making it easy for guests to explore and compare options.
+
+### 3. Booking System
+Guests can book available properties by selecting check-in and check-out dates. The system ensures availability is accurately tracked, prevents double-booking, and provides hosts with booking requests and confirmations.
+
+### 4. Payment Processing
+The platform integrates a secure payment system that allows guests to pay for their bookings. It records transactions, supports different payment statuses (successful, pending, failed), and ensures financial transparency for both guests and hosts.
+
+### 5. Reviews & Ratings
+Guests can leave feedback on properties they have stayed in, including a star rating and written comments. This feature helps build trust between users, provides valuable insights for future guests, and enables hosts to improve their services.
+
+### 6. Search & Filtering
+The platform includes a robust search and filtering system, enabling guests to find properties based on location, date, price range, amenities, and more. This ensures a smoother browsing experience and faster discovery of suitable properties.
+
+### 7. Admin Dashboard (if included)
+Administrators can monitor platform activity, manage users, handle disputes, and oversee property listings. This ensures the system remains secure, fair, and compliant with platform policies.
+
