@@ -32,3 +32,29 @@ A successful project requires collaboration between different specialists, each 
 
 ### 10. Product Owner
 - **Responsibility**: Represents the stakeholders and end-users. Defines priorities, maintains the product backlog, and ensures the team delivers value aligned with business goals.
+
+  ## Technology Stack
+
+This project is built using a modern technology stack that ensures scalability, performance, and maintainability. Below are the key technologies and their roles in the project:
+
+### 1. Django
+- **Purpose**: A high-level Python web framework used to build the backend of the project. It handles server-side logic, request handling, and integration with the database.
+
+### 2. PostgreSQL
+- **Purpose**: A powerful, open-source relational database system. It stores and manages structured project data, ensuring reliability, security, and scalability.
+
+### 3. GraphQL
+- **Purpose**: A query language and runtime for APIs. It provides flexible and efficient data fetching, allowing clients to request exactly the data they need.
+
+### 4. React (if included in your overview)
+- **Purpose**: A JavaScript library for building interactive and responsive user interfaces on the frontend.
+
+### 5. Tailwind CSS (if included)
+- **Purpose**: A utility-first CSS framework used for styling, enabling rapid UI development with consistent design.
+
+### 6. Docker (if included)
+- **Purpose**: Containerization platform that ensures consistent environments across development and production, simplifying deployment and scaling.
+
+### 7. Git & GitHub
+- **Purpose**: Version control and collaboration tools used to manage source code, track changes, and support team collaboration.
+
