@@ -58,3 +58,73 @@ This project is built using a modern technology stack that ensures scalability, 
 ### 7. Git & GitHub
 - **Purpose**: Version control and collaboration tools used to manage source code, track changes, and support team collaboration.
 
+## Database Design
+
+The database is designed to manage users, properties, bookings, payments, and reviews in a way that ensures data consistency, scalability, and easy querying. Below are the key entities, their important fields, and how they relate to one another.
+
+### 1. Users
+- **Fields**:
+  - `id` (Primary Key)
+  - `name`
+  - `email`
+  - `password_hash`
+  - `role` (e.g., host, guest, admin)
+- **Notes**: A user can be both a host (listing properties) and a guest (making bookings).
+
+### 2. Properties
+- **Fields**:
+  - `id` (Primary Key)
+  - `title`
+  - `description`
+  - `location`
+  - `price_per_night`
+  - `host_id` (Foreign Key → Users.id)
+- **Notes**: A property is listed by a user (host). One host can list multiple properties.
+
+### 3. Bookings
+- **Fields**:
+  - `id` (Primary Key)
+  - `property_id` (Foreign Key → Properties.id)
+  - `guest_id` (Foreign Key → Users.id)
+  - `check_in_date`
+  - `check_out_date`
+  - `status` (e.g., pending, confirmed, cancelled)
+- **Notes**: A booking belongs to one property and is created by one guest. A property can have many bookings over time.
+
+### 4. Payments
+- **Fields**:
+  - `id` (Primary Key)
+  - `booking_id` (Foreign Key → Bookings.id)
+  - `amount`
+  - `payment_date`
+  - `status` (e.g., successful, failed, refunded)
+- **Notes**: Each payment is tied to a booking. A booking typically has one payment, but in some cases may have multiple (e.g., installments or refunds).
+
+### 5. Reviews
+- **Fields**:
+  - `id` (Primary Key)
+  - `property_id` (Foreign Key → Properties.id)
+  - `user_id` (Foreign Key → Users.id)
+  - `rating` (1–5 scale)
+  - `comment`
+  - `created_at`
+- **Notes**: A user can leave multiple reviews, but only one review per booking/property combination is typically allowed. A property can have many reviews.
+
+---
+
+### Entity Relationships
+- **Users ↔ Properties**: One-to-Many  
+  A user (host) can list multiple properties.
+- **Users ↔ Bookings**: One-to-Many  
+  A user (guest) can create multiple bookings.
+- **Properties ↔ Bookings**: One-to-Many  
+  A property can have many bookings.
+- **Bookings ↔ Payments**: One-to-One (usually)  
+  Each booking typically has a single payment record.
+- **Properties ↔ Reviews**: One-to-Many  
+  A property can have multiple reviews from different users.
+- **Users ↔ Reviews**: One-to-Many  
+  A user can leave multiple reviews across different properties.
+
+---
+
